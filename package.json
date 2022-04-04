@@ -1,0 +1,57 @@
+{
+    "name": "cdsa365-client-web",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.3",
+        "@testing-library/react": "^12.1.4",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^0.26.1",
+        "env-cmd": "^10.1.0",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.1",
+        "moment-timezone": "^0.5.34",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-redux": "^7.2.8",
+        "react-router-dom": "^6.2.2",
+        "react-scripts": "5.0.0",
+        "redux": "^4.1.2",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-persist": "^6.0.0",
+        "redux-thunk": "^2.4.1",
+        "tw-elements": "*",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "dev": "env-cmd -e dev react-scripts start",
+        "start": "env-cmd -e prod react-scripts start",
+        "build": "env-cmd -e prod react-scripts build",
+        "build:dev": "env-cmd -e dev react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.4",
+        "postcss": "^8.4.12",
+        "tailwindcss": "^3.0.23"
+    }
+}
