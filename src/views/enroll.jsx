@@ -36,13 +36,14 @@ const Enroll = () => {
         axios
             .post(config.api.registerStudent, formData)
             .then(() => {
+                setError(null);
                 setSubmitDisabled(false);
                 setLoading(false);
                 setShowSuccessMessage(true);
             })
             .catch((err) => {
                 console.log(err);
-                setError(err.message);
+                setError(err.response.data);
                 setSubmitDisabled(false);
                 setLoading(false);
             })

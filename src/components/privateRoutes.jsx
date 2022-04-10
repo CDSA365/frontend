@@ -5,8 +5,8 @@ import Landing from "../views/landing-page";
 
 const PrivateRoutes = () => {
     const { isLoggedIn } = useSelector((state) => state.user);
-
-    return isLoggedIn ? <Landing /> : <Navigate to="/login" />;
+    console.log(isLoggedIn);
+    return isLoggedIn ? <Landing /> : <Navigate to="/" />;
 };
 
 export default PrivateRoutes;

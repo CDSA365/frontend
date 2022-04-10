@@ -28,6 +28,7 @@ const Login = () => {
                 .post(config.api.login, formData)
                 .then(({ data }) => {
                     if (error) setError(null);
+                    console.log(data);
                     dispatch(setUser({ ...data, isLoggedIn: true })).then(() =>
                         navigate("/profile")
                     );

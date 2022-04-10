@@ -5,7 +5,11 @@ module.exports = {
         "./node_modules/tw-elements/dist/js/**/*.js",
     ],
     theme: {
-        extend: {},
+        extend: {
+            borderWidth: {
+                1: "1px",
+            },
+        },
     },
     plugins: [require("tw-elements/dist/plugin")],
 };

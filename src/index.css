@@ -30,6 +30,15 @@ code {
         @apply focus:shadow-none border-red-500 focus:border-red-500;
     }
     .card {
-        @apply p-4 rounded-md shadow bg-white;
+        @apply p-4 w-full rounded-md shadow bg-white;
+    }
+    .tab-link {
+        @apply nav-link w-full block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 my-2 hover:border-transparent hover:bg-gray-100 focus:border-transparent;
+    }
+    .btn-group {
+        @apply inline-block px-6 py-2.5 bg-white text-blue-600 border-1 border-blue-600 font-medium text-xs leading-tight uppercase hover:bg-blue-700 focus:outline-none focus:ring-0 hover:text-white transition duration-150 ease-in-out;
+    }
+    .btn-group-active {
+        @apply bg-blue-600 text-white border-blue-600;
     }
 }
