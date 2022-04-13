@@ -40,9 +40,8 @@ const PaymentAndHistory = () => {
                     due: 0,
                     status: "paid",
                     error_code: null,
-                    next_due: moment()
-                        .add(user.gap, `${user.period}${user.gap > 1 && "s"}`)
-                        .format(),
+                    gap: user.gap,
+                    period: `${user.period}${user.gap > 1 ? "s" : ""}`,
                 });
             },
             prefill: {
