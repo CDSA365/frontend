@@ -60,10 +60,9 @@ function Testimonials() {
                     Testimonials
                 </h3>
                 <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Fugit, error amet numquam iure provident voluptate esse
-                    quasi, veritatis totam voluptas nostrum quisquam eum porro a
-                    pariatur veniam.
+                    We are who we are because of the transformations that we
+                    have made in our students lives. Please go through their
+                    opinion about us.
                 </p>
             </div>
 
