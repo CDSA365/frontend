@@ -39,8 +39,8 @@ const Login = () => {
     };
 
     return (
-        <div className="container mx-auto flex h-screen justify-center items-center">
-            <div className="card w-1/4 flex flex-col space-y-4">
+        <div className="container mx-auto flex h-screen justify-center items-center p-4">
+            <div className="card md:w-1/4 flex flex-col space-y-4">
                 {error && <Alert color="red">{error}</Alert>}
                 <div className="w-full">
                     <label htmlFor="email">Email</label>
