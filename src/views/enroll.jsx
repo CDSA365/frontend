@@ -78,10 +78,9 @@ const Enroll = () => {
                 <div className="w-full space-y-4">
                     {showSuccessMessage && (
                         <Alert color="green">
-                            <b>Account created!</b>
-                            <br /> We have sent a verification link to your
-                            email. Please click the link on the email to verify
-                            your account
+                            <b>Enrollment request sent!</b>
+                            <br /> Your enrollment request has been submitted.
+                            You can login once your profile is accepted.
                         </Alert>
                     )}
                     {error && <Alert color="red">{error}</Alert>}

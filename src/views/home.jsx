@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 import bgCurls from "../assets/img/bg-curls.png";
 import { FaPeopleArrows, FaStar, FaUser } from "react-icons/fa";
 import Testimonials from "../components/testimonials";
+import Modal from "../components/modal";
 
 const Home = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
             <main>
@@ -30,12 +32,18 @@ const Home = () => {
                                             ACADEMY IN THE WORLD
                                         </p>
                                     </div>
-                                    <div>
+                                    <div className="flex justify-center space-x-6">
                                         <Link to={"/enroll"}>
                                             <button className="bg-teal-500 rounded-lg p-4 text-white w-64 font-bold">
-                                                ENROLL
+                                                ENROLL NOW
                                             </button>
                                         </Link>
+                                        <button
+                                            className="bg-teal-500 rounded-lg p-4 text-white w-64 font-bold"
+                                            onClick={() => setIsOpen(!isOpen)}
+                                        >
+                                            REQUEST A DEMO
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -293,6 +301,7 @@ const Home = () => {
                 </section>
             </main>
             <Footer />
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
         </>
     );
 };

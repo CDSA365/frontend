@@ -10,5 +10,6 @@ export const config = {
         verifyPayment: BASE_URL + "/payment/verify",
         capturePaymentFailure: BASE_URL + "/payment/capture-failure",
         getPaymentHistory: BASE_URL + "/payments",
+        addLeads: BASE_URL + "/leads/add",
     },
 };
