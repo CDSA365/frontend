@@ -1,7 +1,7 @@
 import axios from "axios";
 import moment from "moment-timezone";
 import React, { useEffect, useState } from "react";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaVideo } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { config } from "../config/config";
 
@@ -86,10 +86,31 @@ const ListClasses = () => {
                             <p className="font-normral text-sm block truncate">
                                 {cls.description}
                             </p>
-                            <p className="text-xs text-zinc-400 flex space-x-2 items-center">
-                                <FaUser size={11} />
-                                <span>{cls.trainer_name}</span>
-                            </p>
+                            <div className="flex space-x-6">
+                                <p className="text-xs text-zinc-400 flex space-x-2 items-center">
+                                    <FaUser size={11} />
+                                    <span>{cls.trainer_name}</span>
+                                </p>
+                                {cls.video_link && (
+                                    <p className="text-xs text-zinc-400 flex space-x-2 items-center">
+                                        <FaVideo size={11} />
+                                        <a
+                                            href={cls.video_link}
+                                            target="_blank"
+                                            title={cls.video_link}
+                                        >
+                                            <span className="truncate">
+                                                {cls.video_link.substring(
+                                                    0,
+                                                    40
+                                                )}
+                                                {cls.video_link.length > 40 &&
+                                                    "..."}
+                                            </span>
+                                        </a>
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}

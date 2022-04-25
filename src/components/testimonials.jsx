@@ -56,7 +56,7 @@ function Testimonials() {
     return (
         <section className="mb-20 text-gray-700">
             <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
-                <h3 className="text-3xl font-bold mb-6 text-white">
+                <h3 className="text-3xl font-bold mb-6 text-white font-bree">
                     Testimonials
                 </h3>
                 <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-white">
@@ -74,12 +74,12 @@ function Testimonials() {
                                 className="overflow-hidden rounded-t-lg p-6"
                                 style={{ backgroundColor: "#9d789b" }}
                             >
-                                <h4 className="text-2xl font-semibold mb-4 text-white">
+                                <h4 className="text-2xl font-semibold mb-4 text-white font-bree">
                                     {testimonial.name}
                                 </h4>
                             </div>
                             <div className="p-6">
-                                <p className="mt-4">
+                                <p className="mt-4 font-sriracha">
                                     <svg
                                         aria-hidden="true"
                                         focusable="false"

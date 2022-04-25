@@ -12,6 +12,10 @@ module.exports = {
             ...colors,
         },
         extend: {
+            fontFamily: {
+                bree: ["Bree Serif", "serif"],
+                sriracha: ["Sriracha", "cursive"],
+            },
             borderWidth: {
                 1: "1px",
             },
