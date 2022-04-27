@@ -3,6 +3,7 @@ import moment from "moment-timezone";
 import React, { useEffect, useState } from "react";
 import { FaUser, FaVideo } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import Placeholder from "../components/placeholder";
 import { config } from "../config/config";
 
 const ListClasses = () => {
@@ -52,7 +53,7 @@ const ListClasses = () => {
                     </button>
                 </div>
             </div>
-            {classes.length > 0 &&
+            {classes.length > 0 ? (
                 classes.map((cls, i) => (
                     <div
                         key={i}
@@ -113,7 +114,10 @@ const ListClasses = () => {
                             </div>
                         </div>
                     </div>
-                ))}
+                ))
+            ) : (
+                <Placeholder message={"No classes to list"} />
+            )}
         </div>
     );
 };
