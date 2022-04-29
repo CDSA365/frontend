@@ -108,6 +108,15 @@ const LeadCaptureForm = ({ setIsOpen }) => {
                     />
                 </div>
             </div>
+            <div className="w-full mb-3">
+                <label htmlFor="concent" className="space-x-2 items-center">
+                    <input type="checkbox" name="concent" />
+                    <span className="text-xs leading-2">
+                        By checking this box, you are concenting to receive
+                        email communication from Carpe Diem Skills Academy
+                    </span>
+                </label>
+            </div>
             <button onClick={handleSubmit} className="w-full btn btn-success">
                 Request a demo
             </button>
