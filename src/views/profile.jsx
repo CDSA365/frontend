@@ -37,6 +37,11 @@ const Profile = () => {
                                 <p className="text-xl font-semibold text-slate-700">
                                     {user.first_name} {user.last_name}
                                 </p>
+                                <hr />
+                                <p>
+                                    Student ID: <b>{user.id}</b>
+                                </p>
+                                <hr />
                                 <p className="flex space-x-2 items-center">
                                     <FaEnvelope size={14} color="#6366f1" />
                                     <span>{user.email}</span>

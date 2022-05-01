@@ -4,14 +4,19 @@ import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiErrorWarningFill } from "react-icons/ri";
 import { useSelector } from "react-redux";
+import Modal from "../components/modal";
 import Placeholder from "../components/placeholder";
 import { config } from "../config/config";
+import QR from "../assets/img/QRCODE.jpeg";
 
 const { REACT_APP_PAYMENT_KEY, REACT_APP_PAYMENT_URL } = process.env;
 
 const PaymentAndHistory = () => {
     const user = useSelector((state) => ({ ...state.user }));
     const [payments, setPayments] = useState([]);
+    const [openModal, setOpenModal] = useState(false);
+    const [paymentMode, setPaymentMode] = useState("card");
+    const [showQrCode, setShowQrCode] = useState(false);
 
     const loadRazorPay = () => {
         return new Promise((resolve, reject) => {
@@ -105,16 +110,34 @@ const PaymentAndHistory = () => {
             .catch((err) => console.log(err.response.data));
     };
 
+    const handlePaymentModeChange = (e) => setPaymentMode(e.target.value);
+
+    const makePayment = () => {
+        if (paymentMode === "card") {
+            initiatePayment();
+        } else {
+            setShowQrCode(true);
+        }
+    };
+
     useEffect(() => {
         fetchPaymentHistory();
     }, []);
+
+    useEffect(() => {
+        if (!openModal) {
+            setPaymentMode("card");
+            setShowQrCode(false);
+        }
+    }, [openModal]);
 
     return (
         <div>
             <div className="mb-4 clearfix">
                 <button
                     className="btn btn-primary float-right"
-                    onClick={initiatePayment}
+                    // onClick={initiatePayment}
+                    onClick={() => setOpenModal(true)}
                 >
                     Make payment
                 </button>
@@ -178,6 +201,66 @@ const PaymentAndHistory = () => {
             ) : (
                 <Placeholder message="No payment history!" />
             )}
+            <Modal isOpen={openModal} setIsOpen={setOpenModal}>
+                <div>
+                    {!showQrCode ? (
+                        <>
+                            <h4 className="font-bold mb-3">
+                                Choose payment mode
+                            </h4>
+                            <hr />
+                            <div
+                                onChange={handlePaymentModeChange}
+                                className="my-3"
+                            >
+                                <p>
+                                    <span className="mr-4">
+                                        <input
+                                            type="radio"
+                                            name="payment_mode"
+                                            value="card"
+                                        />
+                                    </span>
+                                    <label htmlFor="payment_mode">
+                                        Credit/Debit card
+                                    </label>
+                                </p>
+                                <p>
+                                    <span className="mr-4">
+                                        <input
+                                            type="radio"
+                                            name="payment_mode"
+                                            value="upi"
+                                        />
+                                    </span>
+                                    <label htmlFor="payment_mode">UPI</label>
+                                </p>
+                            </div>
+                            <button
+                                className="btn btn-primary my-3 w-full"
+                                onClick={makePayment}
+                            >
+                                Make payment
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <h4 className="font-bold uppercase text-center">
+                                Pay though UPI
+                            </h4>
+                            <img
+                                src={QR}
+                                alt="QR Code"
+                                className="w-64 h-64 my-4"
+                            />
+                            <p className="w-64">
+                                Please scan the QR code above to make payment
+                                throgh UPI
+                            </p>
+                        </>
+                    )}
+                </div>
+            </Modal>
         </div>
     );
 };

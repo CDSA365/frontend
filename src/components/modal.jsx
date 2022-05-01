@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import LeadCaptureForm from "./lear-capture-form";
 
-const Modal = ({ isOpen, setIsOpen }) => {
+const Modal = ({ isOpen, setIsOpen, children }) => {
     return (
         <Transition
             show={isOpen}
@@ -21,7 +21,9 @@ const Modal = ({ isOpen, setIsOpen }) => {
             >
                 <div className="flex items-center justify-center min-h-screen">
                     <Dialog.Overlay className="fixed inset-0 bg-black opacity-50" />
-                    <LeadCaptureForm setIsOpen={setIsOpen} />
+                    <div className="relative bg-white rounded max-w-md mx-auto p-4">
+                        {children}
+                    </div>
                 </div>
             </Dialog>
         </Transition>

@@ -6,6 +6,7 @@ import logo from "../assets/img/cdsa-logo.png";
 import { FaStar } from "react-icons/fa";
 import Testimonials from "../components/testimonials";
 import Modal from "../components/modal";
+import LeadCaptureForm from "../components/lear-capture-form";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -270,7 +271,9 @@ const Home = () => {
                 </section>
             </main>
             <Footer />
-            <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+                <LeadCaptureForm setIsOpen={setIsOpen} />
+            </Modal>
         </>
     );
 };
