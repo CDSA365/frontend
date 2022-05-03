@@ -7,13 +7,21 @@ import AuthLayout from "./views/auth-page";
 import PrivateRoutes from "./components/privateRoutes";
 import Profile from "./views/profile";
 import Landing from "./views/landing-page";
+import HomeV2 from "./views/home-v2";
+import RequestADemo from "./views/request-a-demo";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route element={<Landing />}>
-                    <Route exec path="/" element={<Home />} />
+                    <Route exec path="/" element={<HomeV2 />} />
+                    <Route exec path="/v1" element={<Home />} />
+                    <Route
+                        exec
+                        path="/request-a-demo"
+                        element={<RequestADemo />}
+                    />
                 </Route>
                 <Route element={<AuthLayout />}>
                     <Route exec path="/enroll" element={<Enroll />} />

@@ -45,7 +45,7 @@ const LeadCaptureForm = ({ setIsOpen }) => {
     };
 
     return (
-        <div className="relative bg-white rounded max-w-md mx-auto p-4">
+        <div>
             {error && <Alert color="red">{error}</Alert>}
             {info && <Alert color="blue">{info}</Alert>}
             <div className="flex space-x-4">

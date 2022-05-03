@@ -1,6 +1,20 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-function Testimonials() {
+const Testimonials = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        adaptiveHeight: false,
+        centerMode: false,
+        arrows: false,
+    };
     const testimonials = [
         {
             name: "Bala Murugan, IT Professional",
@@ -54,56 +68,40 @@ function Testimonials() {
         },
     ];
     return (
-        <section className="mb-20 text-gray-700">
-            <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
-                <h3 className="text-3xl font-bold mb-6 text-white font-bree">
-                    Testimonials
-                </h3>
-                <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-white">
-                    We are who we are because of the transformations that we
-                    have made in our students lives. Please go through their
-                    opinion about us.
-                </p>
-            </div>
-
-            <div className="masonry sm:masonry-sm md:masonry-md gap-6 text-center">
-                {testimonials.map((testimonial, i) => (
-                    <div key={i} className="break-inside mb-6">
-                        <div className="block rounded-lg shadow-lg bg-white">
-                            <div
-                                className="overflow-hidden rounded-t-lg p-6"
-                                style={{ backgroundColor: "#9d789b" }}
-                            >
-                                <h4 className="text-2xl font-semibold mb-4 text-white font-bree">
-                                    {testimonial.name}
-                                </h4>
-                            </div>
-                            <div className="p-6">
-                                <p className="mt-4 font-sriracha">
-                                    <svg
-                                        aria-hidden="true"
-                                        focusable="false"
-                                        data-prefix="fas"
-                                        data-icon="quote-left"
-                                        className="w-6 pr-2 inline-block"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
-                                        ></path>
-                                    </svg>
-                                    {testimonial.comment}
-                                </p>
-                            </div>
+        <Slider {...settings}>
+            {testimonials.map((testimonial, i) => (
+                <div key={i} className="break-inside mb-6">
+                    <div className="block rounded-lg shadow-lg bg-white">
+                        <div className="overflow-hidden rounded-t-lg p-2 bg-yellow-500">
+                            <h4 className="text-xl font-semibold text-sky-900 font-bree">
+                                {testimonial.name}
+                            </h4>
+                        </div>
+                        <div className="px-6 py-4">
+                            <p className="mt-4 font-sriracha">
+                                <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    data-prefix="fas"
+                                    data-icon="quote-left"
+                                    className="w-6 pr-2 inline-block"
+                                    role="img"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                                    ></path>
+                                </svg>
+                                {testimonial.comment}
+                            </p>
                         </div>
                     </div>
-                ))}
-            </div>
-        </section>
+                </div>
+            ))}
+        </Slider>
     );
-}
+};
 
 export default Testimonials;

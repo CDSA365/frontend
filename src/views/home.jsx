@@ -60,47 +60,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <section className="pb-20 bg-rose-500 -mt-24">
+                <section className="py-14 bg-rose-500">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-wrap justify-center">
-                            <div className="w-full md:w-4/12 px-4 text-center">
-                                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                                    <div className="px-4 py-5 flex-auto">
-                                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                                            <FaStar />
-                                        </div>
-                                        <h6 className="text-xl font-semibold font-sriracha text-blueGray-800">
-                                            Public Speaking Online Classes for
-                                            Kids
-                                        </h6>
-                                        <p className="mt-2 mb-4 text-blueGray-500">
-                                            Watch your kid transform as a
-                                            Fluent, Public Speaker in 3 months
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="w-full md:w-4/12 px-4 text-center">
-                                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                                    <div className="px-4 py-5 flex-auto">
-                                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                                            <FaStar />
-                                        </div>
-                                        <h6 className="text-xl font-semibold font-sriracha text-blueGray-800">
-                                            Spoken English and Public Speaking
-                                            for Adults
-                                        </h6>
-                                        <p className="mt-2 mb-4 text-blueGray-500">
-                                            You will voice your opinions with
-                                            utmost Confidence in front of a
-                                            crowd or on stage within 3 months
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div className="flex flex-wrap items-center my-16 space-y-6">
                             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto space-y-6 text-white text-bold">
                                 <h3 className="text-3xl mb-2 font-semibold leading-normal font-bree">
@@ -130,9 +91,9 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="relative py-20 bg-blueGray-800">
+                <section className="relative py-14 bg-blueGray-800">
                     <div className="container mx-auto px-4">
-                        <div className="items-center flex flex-wrap space-y-6">
+                        <div className="items-center flex flex-wrap my-16 space-y-6">
                             <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
                                 <img
                                     alt="..."

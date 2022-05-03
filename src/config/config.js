@@ -11,5 +11,6 @@ export const config = {
         capturePaymentFailure: BASE_URL + "/payment/capture-failure",
         getPaymentHistory: BASE_URL + "/payments",
         addLeads: BASE_URL + "/leads/add",
+        getAnnouncement: BASE_URL + "/announcement",
     },
 };

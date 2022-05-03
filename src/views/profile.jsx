@@ -12,6 +12,7 @@ import {
 import ListClasses from "./list-classes";
 import PaymentAndHistory from "./payment-and-history";
 import { setUser } from "../redux/actions/actions";
+import Announcements from "../components/announcements";
 
 const Profile = () => {
     const user = useSelector((state) => state.user);
@@ -26,7 +27,6 @@ const Profile = () => {
             <div className="py-5">
                 <div className="w-full flex space-x-6">
                     <div className="w-1/4 space-y-4">
-                        {/* <div className="w-full h-[308px] bg-gray-100 border-2 border-dashed rounded-md border-gray-400"></div> */}
                         <div className="space-y-2 my-4 border rounded text-sm">
                             <div className="p-4 bg-slate-100 border-b">
                                 <p className="text-slate-600 uppercase font-semibold">
@@ -87,6 +87,9 @@ const Profile = () => {
                         </button>
                     </div>
                     <div className="w-3/4">
+                        <div className="mt-4">
+                            <Announcements />
+                        </div>
                         <ul
                             className="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4"
                             id="tabs-tabFill"
