@@ -13,14 +13,14 @@ const HomeV2 = () => {
         <div>
             <section className="min-h-screen-75 bg-rose-50">
                 <div
-                    className="container h-full mx-auto flex content-center items-center space-x-6"
+                    className="container px-6 h-full mx-auto md:flex content-center items-center space-y-6 md:space-x-6"
                     style={{ height: "75vh" }}
                 >
-                    <div className="w-1/2">
+                    <div className="w-full md:w-1/2 py-12">
                         <p className="uppercase text-sm font-bold">
                             CARPE DIEM SKILLS ACADEMY
                         </p>
-                        <h1 className="text-sky-900 text-[55px] font-black leading-tight">
+                        <h1 className="text-sky-900 text-[33px] md:text-[55px] font-black leading-tight">
                             Making Your Childs World Better
                         </h1>
                         <p className="text-md my-6 text-gray-600">
@@ -29,20 +29,24 @@ const HomeV2 = () => {
                             unto last session for bite. Set have great you'll
                             male grass yielding yielding man
                         </p>
-                        <div className="flex space-x-6">
-                            <Link to={"/enroll"}>
-                                <button className="rounded p-4 inline-block border-1 border-sky-900 uppercase">
-                                    Enroll now
-                                </button>
-                            </Link>
-                            <Link to={"/request-a-demo"}>
-                                <button className="rounded p-4 inline-block border-1 border-rose-900 bg-rose-900 text-white uppercase">
-                                    Request a demo
-                                </button>
-                            </Link>
+                        <div className="space-y-6 md:flex md:space-x-6">
+                            <div>
+                                <Link to={"/enroll"}>
+                                    <button className="rounded p-4 inline-block border-1 border-sky-900 uppercase">
+                                        Enroll now
+                                    </button>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to={"/request-a-demo"}>
+                                    <button className="rounded p-4 inline-block border-1 border-rose-900 bg-rose-900 text-white uppercase">
+                                        Request a demo
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full md:w-1/2">
                         <IMG1SVG />
                     </div>
                 </div>
@@ -52,7 +56,7 @@ const HomeV2 = () => {
                 className="clear-both bg-rose-900"
             />
             <section className="bg-rose-900 py-24 pb-32 -mt-18 min-h-[400px]">
-                <div className="container mx-auto grid grid-cols-4 gap-6 mt-18">
+                <div className="container px-6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mt-18">
                     <div className="space-y-6">
                         <h1 className="text-[55px] text-white font-black leading-tight ">
                             Training Solutions
@@ -138,12 +142,12 @@ const HomeV2 = () => {
                 </div>
             </section>
             <section className="bg-rose-900 py-16 pb-24 relative">
-                <div className="container mx-auto flex space-x-10">
-                    <div className="w-1/3">
+                <div className="container px-6 mx-auto md:flex space-y-10 md:space-x-10">
+                    <div className="w-full md:w-1/3">
                         <IMG2SVG className="w-full h-full" />
                     </div>
-                    <div className="w-2/3 px-6">
-                        <h1 className="text-[55px] text-white font-black leading-tight ">
+                    <div className="w-full md:w-2/3 md:px-6">
+                        <h1 className="text-[33px] md:text-[55px] text-white font-black leading-tight ">
                             What others say about us
                         </h1>
                         <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-white">
@@ -156,64 +160,64 @@ const HomeV2 = () => {
                 </div>
             </section>
             <section className="py-24 relative">
-                <div className="container flex mx-auto space-x-6">
-                    <div className="w-1/2 space-y-6 text-center">
+                <div className="container px-6 md:flex mx-auto space-y-6 md:space-x-6">
+                    <div className="w-full md:w-1/2 space-y-6 text-center">
                         <div className="space-y-6 p-5 py-8 hover:shadow-xl rounded-lg border-1 hover:shadow-slate-400">
-                            <h1 className="text-[33px] text-sky-900 font-black leading-tight ">
+                            <h1 className="text-[22px] md:text-[33px] text-sky-900 font-black leading-tight ">
                                 Public speaking
                                 <br />
                                 class for kids
                             </h1>
-                            <ul className="pl-3 space-y-3">
-                                <li className="font-bold text-xl text-gray-700">
+                            <ul className="pl-3 space-y-3 mb-6">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Personal Trainer Guidance
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Live Online Classes
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Fluency Guaranteed!
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Confidence in Communication Guaranteed!
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Stage Fear Eradication Guaranteed!
                                 </li>
                             </ul>
                             <Link to={"/request-a-demo"}>
-                                <button className="p-4 rounded font-bold inline-block bg-rose-900 text-white uppercase">
+                                <button className="mt-6 p-4 rounded font-bold inline-block bg-rose-900 text-white uppercase">
                                     Request a demo
                                 </button>
                             </Link>
                         </div>
                     </div>
-                    <div className="w-1/2 space-y-6 text-center">
+                    <div className="w-full md:w-1/2 space-y-6 text-center">
                         <div className="space-y-6 p-5 py-8 hover:shadow-xl rounded-lg border-1 hover:shadow-slate-400">
-                            <h1 className="text-[33px] text-sky-900 font-black leading-tight ">
+                            <h1 className="text-[22px] md:text-[33px] text-sky-900 font-black leading-tight ">
                                 Spoken English
                                 <br />
                                 class for Adults
                             </h1>
-                            <ul className="pl-3 space-y-3">
-                                <li className="font-bold text-xl text-gray-700">
+                            <ul className="pl-3 space-y-3 mb-6">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Personal Trainer Guidance
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Live Online Classes
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Fluency Guaranteed!
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Confidence in Communication Guaranteed!
                                 </li>
-                                <li className="font-bold text-xl text-gray-700">
+                                <li className="font-bold text-sm md:text-xl text-gray-700">
                                     Stage Fear Eradication Guaranteed!
                                 </li>
                             </ul>
                             <Link to={"/request-a-demo"}>
-                                <button className="p-4 rounded font-bold inline-block bg-rose-900 text-white uppercase">
+                                <button className="mt-6 p-4 rounded font-bold inline-block bg-rose-900 text-white uppercase">
                                     Request a demo
                                 </button>
                             </Link>
@@ -222,15 +226,15 @@ const HomeV2 = () => {
                 </div>
             </section>
             <section className="py-24">
-                <div className="container flex space-x-6 mx-auto">
-                    <div className="w-1/2">
+                <div className="container px-6 md:flex space-y-6 md:space-x-6 mx-auto">
+                    <div className="w-full md:w-1/2">
                         <img src={IMG3} alt="meditation" />
                     </div>
-                    <div className="w-1/2">
-                        <h1 className="text-[55px] text-sky-900 font-black leading-tight ">
+                    <div className="w-full md:w-1/2">
+                        <h1 className="text-[33px] md:text-[55px] text-sky-900 font-black leading-tight ">
                             Learning levels
                         </h1>
-                        <ul className="grid grid-cols-3 gap-6 mt-24">
+                        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24">
                             <li className="p-4 rounded border-1 text-center space-y-6 hover:bg-rose-50">
                                 <h4 className="uppercase text-rose-900 font-bold text-xl">
                                     Beginner
@@ -267,9 +271,9 @@ const HomeV2 = () => {
                 className="clear-both bg-rose-100"
             />
             <section className="bg-rose-100 py-24">
-                <div className="container flex mx-auto">
-                    <div className="w-2/3 sapce-y-6">
-                        <h1 className="text-[55px] text-red-900 font-black leading-tight ">
+                <div className="container px-6 md:flex mx-auto">
+                    <div className="w-full md:w-2/3 sapce-y-6">
+                        <h1 className="text-[33px] md:text-[55px] text-red-900 font-black leading-tight ">
                             CDSA Advantage
                         </h1>
                         <p className="text-xl">
@@ -278,7 +282,7 @@ const HomeV2 = () => {
                             <br />
                             to engage you every single day of your stay with us.
                         </p>
-                        <ul className="grid grid-cols-3 gap-6 my-12">
+                        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
                             <li className="p-4 border-1 border-rose-800 rounded-md text-center items-center bg-rose-200 font-semibold">
                                 Everyday Sessions
                             </li>
@@ -297,7 +301,7 @@ const HomeV2 = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                         <IMG4SVG />
                     </div>
                 </div>
