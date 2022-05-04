@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import ContactForm from "./contact-form";
 
 export default function Footer() {
     return (
@@ -37,56 +38,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="w-full lg:w-6/12 px-4">
-                            <div className="flex flex-col space-y-6">
-                                <div className="w-full">
-                                    <h3 className="text-white font-bold text-2xl">
-                                        Contact us
-                                    </h3>
-                                </div>
-                                <div className="w-full flex space-x-4">
-                                    <div className="w-4/12">
-                                        <input
-                                            type="text"
-                                            name="first_name"
-                                            placeholder="First name"
-                                            className="input w-full bg-blueGray-600 border-blueGray-700 focus:bg-blueGray-600 focus:border-blueGray-500 focus:text-white placeholder-gray-400"
-                                        />
-                                    </div>
-                                    <div className="w-4/12">
-                                        <input
-                                            type="text"
-                                            name="last_name"
-                                            placeholder="Last name"
-                                            className="input w-full bg-blueGray-600 border-blueGray-700 focus:bg-blueGray-600 focus:border-blueGray-500 focus:text-white placeholder-gray-400"
-                                        />
-                                    </div>
-                                    <div className="w-4/12">
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            placeholder="Email"
-                                            className="input w-full bg-blueGray-600 border-blueGray-700 focus:bg-blueGray-600 focus:border-blueGray-500 focus:text-white placeholder-gray-400"
-                                        />
-                                    </div>
-                                </div>
-
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    placeholder="Subject"
-                                    className="input w-full bg-blueGray-600 border-blueGray-700 focus:bg-blueGray-600 focus:border-blueGray-500 focus:text-white placeholder-gray-400"
-                                />
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    rows="5"
-                                    placeholder="message"
-                                    className="input bg-blueGray-600 border-blueGray-700 focus:bg-blueGray-600 focus:border-blueGray-500 focus:text-white placeholder-gray-400"
-                                />
-                                <button className="p-2 bg-sky-500 inline-block uppercase rounded-md font-semibold text-white">
-                                    Submit
-                                </button>
-                            </div>
+                            <ContactForm />
                         </div>
                     </div>
                     <hr className="my-6 border-blueGray-700" />
@@ -94,7 +46,7 @@ export default function Footer() {
                         <div className="w-full md:w-4/12 px-4 mx-auto text-center">
                             <div className="text-sm text-blueGray-500 font-semibold py-1">
                                 Copyright © {new Date().getFullYear()} Carpe
-                                Diem Skills Academy .
+                                Diem Skills Academy
                             </div>
                         </div>
                     </div>

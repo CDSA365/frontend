@@ -12,5 +12,6 @@ export const config = {
         getPaymentHistory: BASE_URL + "/payments",
         addLeads: BASE_URL + "/leads/add",
         getAnnouncement: BASE_URL + "/announcement",
+        sendContactForm: BASE_URL + "/contact-form",
     },
 };

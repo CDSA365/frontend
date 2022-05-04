@@ -11,12 +11,9 @@ import { Link } from "react-router-dom";
 const HomeV2 = () => {
     return (
         <div>
-            <section className="min-h-screen-75 bg-rose-50">
-                <div
-                    className="container px-6 h-full mx-auto md:flex content-center items-center space-y-6 md:space-x-6"
-                    style={{ height: "75vh" }}
-                >
-                    <div className="w-full md:w-1/2 py-12">
+            <section className="min-h-screen-75 bg-rose-50 relative">
+                <div className="container px-6 mx-auto md:flex content-center items-center space-y-6 md:space-x-6 md:h-[75vh]">
+                    <div className="w-full md:w-1/2 py-12 text-center md:text-left">
                         <p className="uppercase text-sm font-bold">
                             CARPE DIEM SKILLS ACADEMY
                         </p>
@@ -29,7 +26,7 @@ const HomeV2 = () => {
                             unto last session for bite. Set have great you'll
                             male grass yielding yielding man
                         </p>
-                        <div className="space-y-6 md:flex md:space-x-6">
+                        <div className="space-y-6 md:flex md:space-x-6 md:space-y-0">
                             <div>
                                 <Link to={"/enroll"}>
                                     <button className="rounded p-4 inline-block border-1 border-sky-900 uppercase">
@@ -51,14 +48,11 @@ const HomeV2 = () => {
                     </div>
                 </div>
             </section>
-            <SectionDivider
-                fill={"#fff1f2"}
-                className="clear-both bg-rose-900"
-            />
+            <SectionDivider fill={"#fff1f2"} className=" bg-rose-900" />
             <section className="bg-rose-900 py-24 pb-32 -mt-18 min-h-[400px]">
                 <div className="container px-6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mt-18">
                     <div className="space-y-6">
-                        <h1 className="text-[55px] text-white font-black leading-tight ">
+                        <h1 className="text-[33px] md:text-[55px] text-white font-black leading-tight ">
                             Training Solutions
                         </h1>
                         <p className="text-white">
@@ -66,11 +60,13 @@ const HomeV2 = () => {
                             seas saw you arrie said man beast whales his void
                             unto last session for bite.
                         </p>
-                        <Link to={"/request-a-demo"}>
-                            <button className="w-full p-4 inline-block bg-yellow-300 text-red-900 rounded uppercase font-bold">
-                                Request a demo
-                            </button>
-                        </Link>
+                        <div>
+                            <Link to={"/request-a-demo"}>
+                                <button className="w-full p-4 inline-block bg-yellow-300 text-red-900 rounded uppercase font-bold">
+                                    Request a demo
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                     <div className="shadow-box p-4 rounded bg-yellow-50 space-y-6">
                         <h4 className="font-black text-sky-900">
