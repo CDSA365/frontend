@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import Modal from "../components/modal";
 import Placeholder from "../components/placeholder";
 import { config } from "../config/config";
-import QR from "../assets/img/QRCODE.jpeg";
+import QR from "../assets/img/QRCODE.jpg";
 
 const { REACT_APP_PAYMENT_KEY, REACT_APP_PAYMENT_URL } = process.env;
 
@@ -246,7 +246,7 @@ const PaymentAndHistory = () => {
                     ) : (
                         <>
                             <h4 className="font-bold uppercase text-center">
-                                Pay though UPI
+                                Pay through UPI
                             </h4>
                             <img
                                 src={QR}
