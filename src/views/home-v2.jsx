@@ -156,8 +156,8 @@ const HomeV2 = () => {
                 </div>
             </section>
             <section className="py-24 relative">
-                <div className="container px-6 md:flex mx-auto space-y-6 md:space-x-6">
-                    <div className="w-full md:w-1/2 space-y-6 text-center">
+                <div className="container px-6 md:flex mx-auto space-y-6 md:space-y-0 md:space-x-6">
+                    <div className="w-full md:w-1/2 space-y-6  text-center">
                         <div className="space-y-6 p-5 py-8 hover:shadow-xl rounded-lg border-1 hover:shadow-slate-400">
                             <h1 className="text-[22px] md:text-[33px] text-sky-900 font-black leading-tight ">
                                 Public speaking
