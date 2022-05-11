@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { ReactComponent as IMG1SVG } from "../assets/img/support.svg";
 import Alert from "../components/alert";
+import Loader from "../components/loader";
 import { config } from "../config/config";
 
 const RequestADemo = () => {
@@ -12,6 +13,7 @@ const RequestADemo = () => {
         phone: "",
         program: "kids",
     });
+    const [loading, setLoading] = useState(false);
     const [info, setInfo] = useState(null);
     const [error, setError] = useState(null);
 
@@ -20,6 +22,7 @@ const RequestADemo = () => {
     };
 
     const handleSubmit = () => {
+        setLoading(true);
         let errorCount = 0;
 
         Object.values(formData).map((item) => {
@@ -31,39 +34,50 @@ const RequestADemo = () => {
                 .post(config.api.addLeads, formData)
                 .then(() => {
                     if (error) setError(null);
+                    setLoading(false);
                     setInfo("Your request for a demo has been submited");
+                    setFormData((state) => ({
+                        ...state,
+                        first_name: "",
+                        last_name: "",
+                        email: "",
+                        phone: "",
+                        message: "",
+                    }));
                 })
                 .catch(() => {
                     if (info) setInfo(null);
+                    setLoading(false);
                     setError("Error sending request! Please try again");
                 });
         } else {
+            setLoading(false);
             setError("Please fill all the required(*) fields");
         }
     };
 
     return (
         <div className="items-center md:h-[100vh] py-6">
-            <div className="container mx-auto ">
-                {error && (
-                    <Alert
-                        color="red"
-                        className="rounded-none -mt-6 md:mt-0 text-sm"
-                    >
-                        {error}
-                    </Alert>
-                )}
-                {info && (
-                    <Alert
-                        color="green"
-                        className="rounded-none -mt-6 md:mt-0 text-sm"
-                    >
-                        {info}
-                    </Alert>
-                )}
-            </div>
             <div className="container mx-auto h-full md:flex content-center items-center px-4 md:px-0">
                 <div className="w-full md:w-6/12 space-y-6">
+                    <div className="w-full">
+                        {error && (
+                            <Alert
+                                color="red"
+                                className="rounded-none -mt-6 md:mt-0 text-sm"
+                            >
+                                {error}
+                            </Alert>
+                        )}
+                        {info && (
+                            <Alert
+                                color="green"
+                                className="rounded-none -mt-6 md:mt-0 text-sm"
+                            >
+                                {info}
+                            </Alert>
+                        )}
+                    </div>
                     <div>
                         <h1 className="text-3xl font-extrabold text-sky-900">
                             Request a demo
@@ -173,10 +187,11 @@ const RequestADemo = () => {
                         />
                     </div>
                     <button
-                        className="p-2 bg-sky-500 text-white rounded inline-block font-bold uppercase"
+                        className="p-2 bg-sky-500 text-white rounded font-bold uppercase flex space-x-4"
                         onClick={handleSubmit}
                     >
-                        Request a demo
+                        <span>Request a demo</span>
+                        {loading && <Loader color="#fff" />}
                     </button>
                 </div>
                 <div className="w-full md:w-6/12">

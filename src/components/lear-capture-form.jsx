@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { config } from "../config/config";
 import Alert from "./alert";
+import Loader from "./loader";
 
 const LeadCaptureForm = ({ setIsOpen }) => {
     const [error, setError] = useState(null);
@@ -118,7 +119,7 @@ const LeadCaptureForm = ({ setIsOpen }) => {
                 </label>
             </div>
             <button onClick={handleSubmit} className="w-full btn btn-success">
-                Request a demo
+                Request a demo <Loader />
             </button>
         </div>
     );
