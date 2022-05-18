@@ -213,7 +213,7 @@ const PaymentAndHistory = () => {
                                 onChange={handlePaymentModeChange}
                                 className="my-3"
                             >
-                                <p>
+                                {/* <p>
                                     <span className="mr-4">
                                         <input
                                             type="radio"
@@ -224,7 +224,7 @@ const PaymentAndHistory = () => {
                                     <label htmlFor="payment_mode">
                                         Credit/Debit card
                                     </label>
-                                </p>
+                                </p> */}
                                 <p>
                                     <span className="mr-4">
                                         <input

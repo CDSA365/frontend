@@ -46,6 +46,25 @@ const RequestDemoButton = ({ color }) => {
     );
 };
 
+const Ticker = () => {
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-3 py-6">
+            <div className="flex-row items-center py-6 text-white">
+                <p className="text-center text-3xl font-black">3000+</p>
+                <p className="text-center">Students</p>
+            </div>
+            <div className="flex-row items-center py-6 text-white">
+                <p className="text-center text-3xl font-black">500+</p>
+                <p className="text-center">Sessions per day</p>
+            </div>
+            <div className="flex-row items-center py-6 text-white">
+                <p className="text-center text-3xl font-black">100+</p>
+                <p className="text-center">Corporate Clients</p>
+            </div>
+        </div>
+    );
+};
+
 const HomeV2 = () => {
     return (
         <div>
@@ -84,90 +103,11 @@ const HomeV2 = () => {
                     </div>
                 </div>
             </section>
-            <SectionDivider fill={"#fff1f2"} className=" bg-rose-900" />
-            <section className="bg-rose-900 py-24 pb-32 -mt-18 min-h-[400px]">
-                <div className="container px-6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mt-18">
-                    <div className="space-y-6">
-                        <h1 className="text-[33px] md:text-[55px] text-white font-black leading-tight ">
-                            Training Solutions
-                        </h1>
-                        <p className="text-white">
-                            Replenish seasons may male hath fruit beast were
-                            seas saw you arrie said man beast whales his void
-                            unto last session for bite.
-                        </p>
-                        <RequestDemoButton color="inverse" />
-                    </div>
-                    <div className="shadow-box p-4 rounded bg-yellow-50 space-y-6">
-                        <h4 className="font-black text-sky-900">
-                            Communication Skills Training
-                        </h4>
-                        <ul className="text-rose-800 list-disc pl-8">
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Incremental learning
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Vocabulary building
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Discussions / debates
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Presentations
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Sentence structure and grammar
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Listening, Speaking, Reading and Writing (LSRW)
-                                Model
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="shadow-box p-4 rounded bg-yellow-50 space-y-6">
-                        <h4 className="font-black text-sky-900">
-                            Business English Training
-                        </h4>
-                        <ul className="text-rose-800 list-disc pl-8">
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Effective speaking and writing skills
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Business vocabulary
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Presentation Skills
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Public speaking skills
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="shadow-box p-4 rounded bg-yellow-50 space-y-6">
-                        <h4 className="font-black text-sky-900">
-                            Cambridge English Exams Training
-                        </h4>
-                        <ul className="text-rose-800 list-disc pl-8">
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                Young Learners English <br />
-                                <span className="text-xs">
-                                    Pre A1 – Starter, A1 – Movers, A2 – Flyers
-                                </span>
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                A2 – Key for Schools (KET)
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                B1 – Preliminary for Schools (PET)
-                            </li>
-                            <li className="py-2 font-bold -mx-4 text-sm">
-                                BEC – Business English Certificate
-                            </li>
-                        </ul>
-                    </div>
+            <section className="bg-rose-900">
+                <div className="container mx-auto px-6">
+                    <Ticker />
                 </div>
             </section>
-
             <section className="py-24 relative">
                 <div className="container px-6 md:flex mx-auto space-y-6 md:space-y-0 md:space-x-6">
                     <div className="w-full md:w-1/2 space-y-6  text-center">
