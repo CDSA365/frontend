@@ -9,6 +9,7 @@ import Profile from "./views/profile";
 import Landing from "./views/landing-page";
 import HomeV2 from "./views/home-v2";
 import RequestADemo from "./views/request-a-demo";
+import TermsAndCondition from "./views/terms-and-condition";
 
 function App() {
     return (
@@ -21,6 +22,11 @@ function App() {
                         exec
                         path="/request-a-demo"
                         element={<RequestADemo />}
+                    />
+                    <Route
+                        exec
+                        path="/terms-and-condition"
+                        element={<TermsAndCondition />}
                     />
                 </Route>
                 <Route element={<AuthLayout />}>

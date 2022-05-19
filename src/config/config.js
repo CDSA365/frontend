@@ -13,5 +13,6 @@ export const config = {
         addLeads: BASE_URL + "/leads/add",
         getAnnouncement: BASE_URL + "/announcement",
         sendContactForm: BASE_URL + "/contact-form",
+        getFeeData: BASE_URL + "/student/fee-data",
     },
 };

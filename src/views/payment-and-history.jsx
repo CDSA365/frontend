@@ -17,6 +17,7 @@ const PaymentAndHistory = () => {
     const [openModal, setOpenModal] = useState(false);
     const [paymentMode, setPaymentMode] = useState("card");
     const [showQrCode, setShowQrCode] = useState(false);
+    const [feeData, setFeeData] = useState({});
 
     const loadRazorPay = () => {
         return new Promise((resolve, reject) => {
@@ -31,22 +32,21 @@ const PaymentAndHistory = () => {
     const postLoadFunction = (paymentData) => {
         const option = {
             key: REACT_APP_PAYMENT_KEY,
-            amount: user.fee,
+            amount: feeData.fee,
             currency: "INR",
             name: "Carpe Diem Skills Academy",
             description: `Class fee for ${user.first_name} ${user.last_name}`,
             image: "",
             order_id: paymentData.id,
             handler: (response) => {
-                console.log(response);
                 verifyPayment({
                     ...response,
-                    paid: user.fee * 100,
-                    due: 0,
+                    id: user.id,
+                    paid: feeData.fee * 100,
+                    gap: feeData.gap,
+                    period: feeData.period,
                     status: "paid",
                     error_code: null,
-                    gap: user.gap,
-                    period: `${user.period}${user.gap > 1 ? "s" : ""}`,
                 });
             },
             prefill: {
@@ -68,7 +68,7 @@ const PaymentAndHistory = () => {
     const initiatePayment = () => {
         axios
             .post(config.api.makePayment, {
-                amount: user.fee,
+                amount: feeData.fee,
                 student_id: user.id,
             })
             .then(({ data }) => {
@@ -120,8 +120,15 @@ const PaymentAndHistory = () => {
         }
     };
 
+    const fetchFeeData = () => {
+        axios
+            .get(config.api.getFeeData + `/${user.id}`)
+            .then(({ data }) => setFeeData(data));
+    };
+
     useEffect(() => {
         fetchPaymentHistory();
+        fetchFeeData();
     }, []);
 
     useEffect(() => {
