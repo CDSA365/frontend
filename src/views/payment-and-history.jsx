@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import Modal from "../components/modal";
 import Placeholder from "../components/placeholder";
 import { config } from "../config/config";
-import QR from "../assets/img/QRCODE.jpg";
+import QR from "../assets/img/UPIQR.png";
 
 const { REACT_APP_PAYMENT_KEY, REACT_APP_PAYMENT_URL } = process.env;
 
