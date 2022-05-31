@@ -246,6 +246,7 @@ const PaymentAndHistory = () => {
                             <button
                                 className="btn btn-primary my-3 w-full"
                                 onClick={makePayment}
+                                disabled={paymentMode === "card"}
                             >
                                 Make payment
                             </button>
