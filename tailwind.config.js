@@ -85,6 +85,7 @@ module.exports = {
     },
     plugins: [
         require("tw-elements/dist/plugin"),
+        require("@tailwindcss/typography"),
         plugin(function ({ addComponents, theme }) {
             const screens = theme("screens", {});
             addComponents([
