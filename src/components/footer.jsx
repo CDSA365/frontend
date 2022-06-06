@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+    FaArrowRight,
+    FaFacebook,
+    FaInstagram,
+    FaTwitter,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 import ContactForm from "./contact-form";
 
 export default function Footer() {
@@ -35,6 +41,22 @@ export default function Footer() {
                                 >
                                     <FaInstagram />
                                 </button>
+                            </div>
+                            <div className="mt-5">
+                                <h3 className="text-3xl font-semibold text-white">
+                                    Links
+                                </h3>
+                                <ul className="mt-3">
+                                    <li>
+                                        <Link
+                                            to={"/terms-and-condition"}
+                                            className="text-white no-underline flex items-center space-x-2"
+                                        >
+                                            <FaArrowRight />
+                                            <p>Terms &amp; Conditions</p>
+                                        </Link>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div className="w-full lg:w-6/12 px-4">
