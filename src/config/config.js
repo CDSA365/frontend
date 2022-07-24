@@ -14,5 +14,6 @@ export const config = {
         getAnnouncement: BASE_URL + "/announcement",
         sendContactForm: BASE_URL + "/contact-form",
         getFeeData: BASE_URL + "/student/fee-data",
+        getSeoData: BASE_URL + "/seo/get",
     },
 };
