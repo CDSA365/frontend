@@ -18,7 +18,7 @@ const Enroll = () => {
         district: "",
         state: "",
         pincode: "",
-        aadhar_number: "",
+        // aadhar_number: "",
         password: "",
     });
     const [error, setError] = useState(null);
@@ -62,7 +62,7 @@ const Enroll = () => {
             formData.district &&
             formData.state &&
             formData.pincode &&
-            formData.aadhar_number &&
+            // formData.aadhar_number &&
             formData.dob &&
             formData.password
         ) {
@@ -274,7 +274,7 @@ const Enroll = () => {
                             />
                         </div>
                     </div>
-                    <div className="w-full">
+                    {/* <div className="w-full">
                         <label
                             className="text-sm font-semibold text-gray-400"
                             htmlFor="aadhar_number"
@@ -288,7 +288,7 @@ const Enroll = () => {
                             className={`input`}
                             onChange={handleOnchange}
                         />
-                    </div>
+                    </div> */}
                     <div className="w-full">
                         <label
                             className="text-sm font-semibold text-gray-400"
